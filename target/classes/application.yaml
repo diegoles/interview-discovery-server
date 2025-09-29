@@ -1,0 +1,20 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: interview-discovery-server
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: ${APP_EUREKA_ZONE:http://user:test@localhost:8761/eureka}
+  instance:
+    hostname: ${APP_EUREKA_HOSTNAME:localhost}
+
+app:
+  eureka:
+    username: ${APP_EUREKA_USERNAME:user}
+    password: ${APP_EUREKA_PASSWORD:test}
